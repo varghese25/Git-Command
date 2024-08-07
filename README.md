@@ -3,7 +3,7 @@ cd .git
 del index.lock**<br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
-<H6>**Git Hub Command**<br>
+**Git Hub Command**<br>
 Here i have created git repo called SoftwareTesting to check the git command 'Branch''Checkout'<br>
 * Step 1 : git init
 * Step 2 : git add . // varghese.py / test.py in this files are empty
@@ -12,15 +12,15 @@ Here i have created git repo called SoftwareTesting to check the git command 'Br
 * Step 5 : git remote add origin https://github.com/varghese25/SoftwareTesting.git
 * Step 6 : git push -u origin main<br>
 
-<H6>**Local Folder named TestingFile inside two files varghese.py (empty without Any Code) / test.txt(empty without Any Code) -> and pushed to github main branch**<br>
+**Local Folder named TestingFile inside two files varghese.py (empty without Any Code) / test.txt(empty without Any Code) -> and pushed to github main branch**<br>
 
-<H6> **New Branch Creation github called 'myworkings'**<br>
+**New Branch Creation github called 'myworkings'**<br>
 * Step 1 : git checkout -b 'myworkings'
 * Step 2 : git add varghese.py // add few line of code in the varghese.py in the 'myworkings' branch.
 * Step 3 : git commit -m 'varghese py' // commit message
 * Step 4 : git push  -u origin myworkings // pushed file in this branch<br>
 
-<H6>**Branch switch is possible through**<br>
+**Branch switch is possible through**<br>
 
 * git checkout master -> currently in master
 * git checkout myworkinfs -> currently in myworkings 
