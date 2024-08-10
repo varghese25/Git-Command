@@ -30,3 +30,21 @@ Here i have created git repo called SoftwareTesting to check the git command 'Br
 > [!IMPORTANT]  : Main branch varghese.py without any code. myworkings branch varghese.py withcode when you switch between branch the files as to reload. 
  example : main branch varghese.py to myworkings branch it says to reoad.<br>
  Refer: SoftwareTesting Repo for further clarity..
+
+**How To Delete Branch**
+
+Check out from the branch which we would like like. in this example i would like to delete Java Brach<br>
+
+* Step 1 PS E:\myWorks\VsCodeJava> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+* Step 2 PS E:\myWorks\VsCodeJava> git branch -d Java
+warning: deleting branch 'Java' that has been merged to
+         'refs/remotes/origin/Java', but not yet merged to HEAD.
+Deleted branch Java (was eb954ee).
+* Step 3 PS E:\myWorks\VsCodeJava> git push origin -d Java
+To https://github.com/varghese25/VScodeJava.git
+ - [deleted]         Java
+
+
+
