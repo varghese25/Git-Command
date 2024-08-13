@@ -3,7 +3,7 @@ cd .git
 del index.lock**<br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
-** Short status flags are:
+** Short status flags are:** 
 
 * ?? - Untracked files
 * A - Files added to stage
