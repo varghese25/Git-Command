@@ -3,6 +3,15 @@ cd .git
 del index.lock**<br>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
+** Short status flags are:
+
+* ?? - Untracked files
+* A - Files added to stage
+* M - Modified files
+* D - Deleted files <br>
+
+
+
 **Git Hub Command**<br>
 Here i have created git repo called SoftwareTesting to check the git command 'Branch''Checkout'<br>
 * Step 1 : git init
