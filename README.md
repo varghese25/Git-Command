@@ -1,3 +1,22 @@
+# LIST of VCS Tools
+- Git
+- SVN
+- ClearCase
+- Mercurial
+- TFS
+- Helix Core (Perforce)
+
+# Git Features
+- Works on distributed system (Example it store a copy in local & Remote)
+
+-
+
+
+
+
+
+
+
 Git Pull, Merge, and Rebase — Simple Explanation
 What git pull Actually Does
 
