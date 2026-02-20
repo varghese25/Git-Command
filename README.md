@@ -9,8 +9,34 @@
 # Git Features
 - Works on distributed system (Example it store a copy in local & Remote)
 
--
-
+- 
+| Category                        | Commands Used                                                                                          | Purpose / What You Practiced                                         |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Git – Basic Workflow**        | `git status`<br>`git add .`<br>`git commit -m`<br>`git push`<br>`git pull`<br>`git pull --rebase`      | Standard Git workflow: staging, committing, pushing, syncing changes |
+| **Git – Remote Setup**          | `git remote -v`<br>`git remote add origin`<br>`git remote set-url origin`<br>`git push -u origin main` | Managing remote repositories                                         |
+| **Git – Initialization**        | `git init`                                                                                             | Initializing repositories multiple times in different folders        |
+| **Git – Logs & History**        | `git log`<br>`git log --oneline`<br>`history`                                                          | Viewing commit and command history                                   |
+| **Git – File Tracking Control** | `git rm --cached`<br>`git restore`<br>`git reset`                                                      | Undoing staged files & resetting commits                             |
+| **Directory Navigation**        | `cd`<br>`cd ..`<br>`cd -`<br>`cd ~`<br>`pwd`<br>`pwd -L`<br>`pwd -P`                                   | Navigation between directories                                       |
+| **Listing Files**               | `ls`<br>`ll`<br>`ls -l`<br>`ls -lrt`                                                                   | Viewing files in various formats                                     |
+| **File Creation**               | `touch`<br>`touch -a`<br>`touch -m`<br>`touch -t`                                                      | Creating files & modifying timestamps                                |
+| **File Viewing**                | `cat`<br>`cat -n`<br>`cat -b`<br>`cat -s`<br>`cat -v`                                                  | Viewing file contents in different formats                           |
+| **Text Writing & Redirection**  | `echo "text" > file`<br>`echo "text" >> file`                                                          | Overwrite (`>`) and Append (`>>`)                                    |
+| **File Editing**                | `vim`<br>`vi`<br>`nano`                                                                                | Editing files                                                        |
+| **File Move / Rename**          | `mv`<br>`mv -i`                                                                                        | Moving and renaming files                                            |
+| **File Copy**                   | `cp`<br>`cp -rf`<br>`cp -a`                                                                            | Copying files and directories                                        |
+| **File Remove**                 | `rm`<br>`rm -i`<br>`rm -f`<br>`rm -r`<br>`rm -rf`                                                      | Deleting files and folders                                           |
+| **Search & Filtering**          | `grep`<br>`grep -i`<br>`ls -l \| grep`                                                                 | Searching text and filtering output                                  |
+| **Pipes Usage**                 | `cat file \| grep`                                                                                     | Using pipe operator                                                  |
+| **Script Execution**            | `bash hello.sh`<br>`./hello.sh`<br>`./voter.sh`                                                        | Running Bash scripts                                                 |
+| **Script Rename**               | `mv hello.sh voter.sh`                                                                                 | Renaming scripts                                                     |
+| **System Update / Packages**    | `sudo apt update`<br>`sudo apt upgrade`<br>`sudo apt install`                                          | Installing and updating packages                                     |
+| **SSH Setup**                   | `ssh`<br>`sudo apt install openssh-server`<br>`systemctl start ssh`                                    | SSH server setup and testing                                         |
+| **Process Monitoring**          | `top`                                                                                                  | Viewing running processes                                            |
+| **Environment Variables**       | `echo "export DISPLAY=:0" >> ~/.bashrc`<br>`source ~/.bashrc`                                          | Updating shell configuration                                         |
+| **Hostname & User Info**        | `hostname`<br>`whoami`<br>`id`<br>`who`                                                                | System identity commands                                             |
+| **Git Demo Practice**           | Creating demo repo<br>`git restore`<br>`git reset <commit-id>`                                         | Git lifecycle testing & version rollback                             |
+| **Directory Backup Practice**   | `cp -rf folder folder_old`                                                                             | Manual folder backup simulation                                      |
 
 
 
