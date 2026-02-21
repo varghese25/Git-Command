@@ -9,6 +9,32 @@
 # Git Features
 - Works on distributed system (Example it store a copy in local & Remote)
 
+
+
+# git reset HEAD -> Mastr [Position] I can change or switch the any file position  
+
+commit 9469d80c1d2cc09909431432055ec26d7b6d1604 [Positon of Head ]
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Sat Feb 21 18:19:48 2026 -0500
+
+    Revert "file added with second line" - Deleting this Commit by Varghese
+
+    This reverts commit cbb503fc3dcbc655fca671e7b9d55cbceac16aee.
+
+commit 7d7b73d99dd3bfe0f7e31a4d7d2e7765238fc2b3
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Thu Feb 19 11:53:36 2026 -0500
+
+    file3 and file4 added
+
+commit cbb503fc3dcbc655fca671e7b9d55cbceac16aee
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Thu Feb 19 11:51:12 2026 -0500
+
+    file added with second line
+
+
+
 - 
 | Category                        | Commands Used                                                                                          | Purpose / What You Practiced                                         |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
