@@ -1,3 +1,412 @@
+
+Git Rebase feature(branch) -> main
+
+Steps
+
+ 1993  cd /mnt/e
+ 1994  pwd
+ 1995  ls -lrt
+ 1996  cd Git-Command/
+ 1997  ls -lrt
+ 1998  git branch
+ 1999  touch file4 file5
+ 2000  git status
+ 2001  git add .
+ 2002  git commit -m 'change1'
+ 2003  git log
+ 2004  git status
+ 2005  touch file6 file7
+ 2006  ls
+ 2007  ll
+ 2008  ls -lrt
+ 2009  git add .
+ 2010  git commit -m 'change2'
+ 2011  git checkout main
+ 2012  git branch
+ 2013  git status
+ 2014  ll
+ 2015  touch varghese
+ 2016  touch tiju
+ 2017  ll
+ 2018  git add .
+ 2019  git commit -m 'main1'
+ 2020  touch serah evan
+ 2021  ll
+ 2022  git add .
+ 2023  git commit -m 'main2'
+ 2024  git rebase feature main
+ 2025  git branch
+ 2026  ll
+ 2027  history
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ ll
+total 328
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:08  ./
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 19:28  ../
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:08  .git/
+-rwxrwxrwx 1 varghese varghese 320041 Aug 23  2025 'Git Basic Command Document.docx'*
+-rwxrwxrwx 1 varghese varghese  10986 Feb 21 18:38  README.md*
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 20:31  branchdemo/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  evan*
+-rwxrwxrwx 1 varghese varghese     15 Feb 22 18:13  file1*
+-rwxrwxrwx 1 varghese varghese      7 Feb 22 18:13  file2*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file4*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file5*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file6*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file7*
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:08  image/
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  sampleFile.txt.txt*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  serah*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  tiju*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  varghese*
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  varghese.py*
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git log # Sequences of commit below change1 & change now available in main branch called rebase
+
+
+commit cb6fa90063b29b63c097384e72719c6047596c93 (feature)
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:03:33 2026 -0500
+
+    change2
+
+commit 538c344771c95a9f20c391936c28d0d08285b16d
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:01:04 2026 -0500
+
+    change1
+	
+	
+	
+	---------------------------------------------------------------------------
+	git Cherry-pick commit id
+	
+	
+	commit 3a9ddcdd7cd29d5eae465e700f01b87ad80aaf5b
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git checkout feature
+Switched to branch 'feature'
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git branch
+  develop
+* feature
+  main
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ touch pick1
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git commit -m 'pick1'
+[feature 38e20b5] pick1
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 image/Git CheeryPick only specific commit.PNG
+ create mode 100644 pick1
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$  touch pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git commit -m 'pick2'
+[feature 9754410] pick2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ touch pick3
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git commit -m 'pick3'
+[feature 7b30f62] pick3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pick3
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git log
+commit 7b30f626c738b2bed65b90cafaf4339092ac7a28 (HEAD -> feature)
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:20:06 2026 -0500
+
+    pick3
+
+commit 975441090a1e010d0b6049c93feeee556e1fc555
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:19:33 2026 -0500
+
+    pick2
+
+commit 38e20b5219a8f0b0461c69a9f473b015ac3d5ab1
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:19:03 2026 -0500
+
+    pick1
+
+commit cb6fa90063b29b63c097384e72719c6047596c93
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:03:33 2026 -0500
+
+    change2
+
+commit 538c344771c95a9f20c391936c28d0d08285b16d
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:01:04 2026 -0500
+
+    change1
+
+commit d0a1b77f464e55322356d242075d7b5ad27d9d63 (origin/main, origin/HEAD)
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Sun Feb 22 18:15:44 2026 -0500
+
+    new files added
+
+commit 5c25f2d9d21c3fa48621fe9ca79afd9fdbaf2640
+Author: Varghese Baby <Vbpoulose@gmail.com>
+Date:   Sat Feb 21 18:39:56 2026 -0500
+
+    Git: Essentials
+
+commit cb594ed371bc6e764c021a62a625ce804808fcf9
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git branch
+  develop
+  feature
+* main
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ ll -lrt
+total 328
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  varghese.py*
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  sampleFile.txt.txt*
+-rwxrwxrwx 1 varghese varghese 320041 Aug 23  2025 'Git Basic Command Document.docx'*
+-rwxrwxrwx 1 varghese varghese  10986 Feb 21 18:38  README.md*
+-rwxrwxrwx 1 varghese varghese     15 Feb 22 18:13  file1*
+-rwxrwxrwx 1 varghese varghese      7 Feb 22 18:13  file2*
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 19:28  ../
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 20:31  branchdemo/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file4*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file5*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file6*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file7*
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:21  image/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  evan*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  serah*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  tiju*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  varghese*
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:21  ./
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:21  .git/
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git log
+commit 9f56e306f10775fe76377f4824c6ab646c221ed6 (HEAD -> main)
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:07:04 2026 -0500
+
+    main2
+
+commit 5427255f4c255216d23889b295463e0c85e105c7
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:06:04 2026 -0500
+
+    main1
+
+commit cb6fa90063b29b63c097384e72719c6047596c93
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:03:33 2026 -0500
+
+    change2
+
+commit 538c344771c95a9f20c391936c28d0d08285b16d
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Tue Feb 24 12:01:04 2026 -0500
+
+    change1
+
+commit d0a1b77f464e55322356d242075d7b5ad27d9d63 (origin/main, origin/HEAD)
+Author: Varghese Baby <vbpoulose@gmail.com>
+Date:   Sun Feb 22 18:15:44 2026 -0500
+
+    new files added
+
+commit 5c25f2d9d21c3fa48621fe9ca79afd9fdbaf2640
+Author: Varghese Baby <Vbpoulose@gmail.com>
+Date:   Sat Feb 21 18:39:56 2026 -0500
+
+    Git: Essentials
+
+commit cb594ed371bc6e764c021a62a625ce804808fcf9
+Author: Varghese Baby <Vbpoulose@gmail.com>
+Date:   Fri Feb 20 13:32:38 2026 -0500
+
+    Git:README.MD
+
+commit 3a9ddcdd7cd29d5eae465e700f01b87ad80aaf5b
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git cherry-pick 975441090a1e010d0b6049c93feeee556e1fc555
+[main 1bd385f] pick2
+ Date: Tue Feb 24 12:19:33 2026 -0500
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ ll
+total 328
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:23  ./
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 19:28  ../
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:23  .git/
+-rwxrwxrwx 1 varghese varghese 320041 Aug 23  2025 'Git Basic Command Document.docx'*
+-rwxrwxrwx 1 varghese varghese  10986 Feb 21 18:38  README.md*
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 20:31  branchdemo/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  evan*
+-rwxrwxrwx 1 varghese varghese     15 Feb 22 18:13  file1*
+-rwxrwxrwx 1 varghese varghese      7 Feb 22 18:13  file2*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file4*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file5*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file6*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file7*
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:21  image/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:23  pick2*                   -----> only pick2 in main brach it called cherry-pick
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  sampleFile.txt.txt*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  serah*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  tiju*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  varghese*
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  varghese.py*
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$
+
+
+
+-----------------------------------------------------------------------
+
+
+Git Stash : BackGround i can hide the file , in Memory
+Git stash pop : BackGround i hided in order to work other file later i will bring back and work the file which hide 
+Git stash list : can view all hideden file
+
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ touch one two
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        one
+        two
+
+nothing added to commit but untracked files present (use "git add" to track)
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash
+No local changes to save
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   one
+        new file:   two
+
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash
+Saved working directory and index state WIP on main: 1bd385f pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ touch tamil
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        tamil
+
+nothing added to commit but untracked files present (use "git add" to track)
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git commit -m 'tamil file added'
+[main 42ff63b] tamil file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 tamil
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash list
+stash@{0}: WIP on main: 1bd385f pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ touch world
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git add .
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash
+Saved working directory and index state WIP on main: 42ff63b tamil file added
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash list
+stash@{0}: WIP on main: 42ff63b tamil file added
+stash@{1}: WIP on main: 1bd385f pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   world
+
+Dropped refs/stash@{0} (9826169c472de73297d5180bc0082636078ef601)
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 6 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   world
+
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git commit -m 'world updated'
+[main 5b535d6] world updated
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 world
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash list
+stash@{0}: WIP on main: 1bd385f pick2
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ git stash pop 0
+On branch main
+Your branch is ahead of 'origin/main' by 7 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   one
+        new file:   two
+
+Dropped refs/stash@{0} (3cf28ea17ef1ff03d5323d08f2a22270a66249b1)
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$ ll
+total 328
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:40  ./
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 19:28  ../
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:40  .git/
+-rwxrwxrwx 1 varghese varghese 320041 Aug 23  2025 'Git Basic Command Document.docx'*
+-rwxrwxrwx 1 varghese varghese  10986 Feb 21 18:38  README.md*
+drwxrwxrwx 1 varghese varghese   4096 Feb 22 20:31  branchdemo/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  evan*
+-rwxrwxrwx 1 varghese varghese     15 Feb 22 18:13  file1*
+-rwxrwxrwx 1 varghese varghese      7 Feb 22 18:13  file2*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file4*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file5*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file6*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:08  file7*
+drwxrwxrwx 1 varghese varghese   4096 Feb 24 12:21  image/
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:40  one*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:23  pick2*
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  sampleFile.txt.txt*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  serah*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:31  tamil*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  tiju*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:40  two*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:21  varghese*
+-rwxrwxrwx 1 varghese varghese      0 Aug 23  2025  varghese.py*
+-rwxrwxrwx 1 varghese varghese      0 Feb 24 12:36  world*
+varghese@DESKTOP-OODIU93:/mnt/e/Git-Command$
+
+
+
+
+
+
+
+
+
+
+
+
 # LIST of VCS Tools
 - Git
 - SVN
