@@ -1,4 +1,20 @@
 
+
+
+# Core Commands Used Daily in Real Projects
+
+- git status
+- git add .
+- git commit -m "message"
+- git pull
+- git push
+- git branch
+- git switch
+- git merge
+- git stash
+
+
+
 Git Rebase feature(branch) -> main
 
 Steps
