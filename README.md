@@ -1,4 +1,24 @@
+# Git git stash push -m 'Working 18a.py'
 
+
+- PS E:\PythonCourse_26_03_2025> cd  '.\Q&A\'
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash push -m 'Working 18a.py'
+- Saved working directory and index state On master: Working 18a.py
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash list
+- stash@{0}: On master: Working 18a.py
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash show
+ - Q&A/18a.py | 0
+ - 1 file changed, 0 insertions(+), 0 deletions(-)
+
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash show
+ - Q&A/18a.py | 0
+ - 1 file changed, 0 insertions(+), 0 deletions(-)
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash show -p
+- diff --git a/Q&A/18a.py b/Q&A/18a.py
+- new file mode 100644
+- index 0000000..e69de29
+- PS E:\PythonCourse_26_03_2025\Q&A> git stash list
+- stash@{0}: On master: Working 18a.py
 
 
 # Core Commands Used Daily in Real Projects
