@@ -1,0 +1,31 @@
+arghese@varghese-Lenovo-E40-70:~/Desktop/mintZena22.3/Git-Command$ git push -u origin main
+Username for 'https://github.com': varghese25
+Password for 'https://varghese25@github.com': 
+remote: Permission to varghese25/Git-Command.git denied to varghese25.
+fatal: unable to access 'https://github.com/varghese25/Git-Command.git/': The requested URL returned error: 403
+
+If This Error means currently it using HTTPS so it require token to genertate from Setting->Developer Settings -> Personal access Token
+
+To avoid This : Use SSH create a public and private key
+varghese@varghese-Lenovo-E40-70:~/Desktop/mintZena22.3/Git-Command$ ssh -T git@github.com
+Hi varghese25! You've successfully authenticated, but GitHub does not provide shell access.
+varghese@varghese-Lenovo-E40-70:~/Desktop/mintZena22.3/Git-Command$ git remote -v
+origin	https://github.com/varghese25/Git-Command.git (fetch)
+origin	https://github.com/varghese25/Git-Command.git (push)
+
+
+And then Configure Follow below setUp:
+arghese@varghese-Lenovo-E40-70:~/Desktop/mintZena22.3/Git-Command$ git remote -v
+origin	git@github.com:varghese25/Git-Command.git (fetch)
+origin	git@github.com:varghese25/Git-Command.git (push)
+varghese@varghese-Lenovo-E40-70:~/Desktop/mintZena22.3/Git-Command$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 38.17 KiB | 12.72 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:varghese25/Git-Command.git
+   d23677a..fa50681  main -> main
+branch 'main' set up to track 'origin/main'.
